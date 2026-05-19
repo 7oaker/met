@@ -1,2 +1,0 @@
-# met
-privacy policy
