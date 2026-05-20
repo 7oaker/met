@@ -4,153 +4,134 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Met – Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --bg:            #040E0E;
+      --bg2:           #081A1A;
+      --surface:       #0F2626;
+      --surface2:      #193636;
+      --accent:        #0891B2;
+      --accent-light:  #22D3EE;
+      --accent-deep:   #0F4C4C;
+      --text-primary:  #F0FAFA;
+      --text-secondary:#7BBFBF;
+      --text-tertiary: #4A7878;
+      --border:        rgba(8,145,178,0.12);
+      --border-medium: rgba(8,145,178,0.20);
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text-secondary);
       line-height: 1.7;
-      padding: 40px 20px 80px;
+      padding: 48px 20px 80px;
     }
 
     .container {
-      max-width: 740px;
+      max-width: 720px;
       margin: 0 auto;
     }
 
+    /* Header */
     header {
       margin-bottom: 48px;
-      border-bottom: 1px solid #21262d;
-      padding-bottom: 32px;
     }
 
-    .app-name {
-      font-size: 13px;
+    .app-label {
+      font-size: 11px;
       font-weight: 600;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #58a6ff;
-      margin-bottom: 8px;
+      color: var(--accent);
+      margin-bottom: 10px;
     }
 
     h1 {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 700;
-      color: #f0f6fc;
-      margin-bottom: 8px;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      line-height: 1.2;
     }
 
     .meta {
       font-size: 13px;
-      color: #8b949e;
+      color: var(--text-tertiary);
+      margin-top: 4px;
     }
 
-    .badge {
-      display: inline-block;
-      background: #1f3a5f;
-      color: #58a6ff;
+    /* Divider */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border-medium);
+      margin: 32px 0;
+    }
+
+    /* Summary box */
+    .summary-box {
+      background: var(--surface);
+      border: 1px solid var(--border-medium);
+      border-left: 3px solid var(--accent);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 40px;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .summary-box strong {
+      color: var(--text-primary);
+    }
+
+    /* Section headings */
+    h2 {
       font-size: 11px;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 20px;
-      margin-top: 12px;
-    }
-
-    h2 {
-      font-size: 17px;
-      font-weight: 600;
-      color: #f0f6fc;
-      margin-top: 40px;
-      margin-bottom: 12px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #21262d;
+      color: var(--text-tertiary);
+      margin-top: 44px;
+      margin-bottom: 14px;
     }
 
     h3 {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
-      color: #e6edf3;
-      margin-top: 20px;
-      margin-bottom: 8px;
+      color: var(--text-primary);
+      margin-top: 24px;
+      margin-bottom: 10px;
     }
 
     p {
-      margin-bottom: 14px;
       font-size: 14px;
-      color: #c9d1d9;
+      color: var(--text-secondary);
+      margin-bottom: 14px;
     }
 
     ul {
+      padding-left: 20px;
       margin-bottom: 14px;
-      padding-left: 22px;
     }
 
     li {
       font-size: 14px;
-      color: #c9d1d9;
+      color: var(--text-secondary);
       margin-bottom: 6px;
     }
 
-    .highlight-box {
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-left: 3px solid #58a6ff;
-      border-radius: 6px;
-      padding: 16px 18px;
-      margin-bottom: 20px;
-      font-size: 14px;
-    }
-
-    .highlight-box.green {
-      border-left-color: #3fb950;
-    }
-
-    .highlight-box.yellow {
-      border-left-color: #d29922;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-      font-size: 13px;
-    }
-
-    th {
-      text-align: left;
-      color: #8b949e;
+    strong {
+      color: var(--text-primary);
       font-weight: 600;
-      padding: 8px 12px;
-      border-bottom: 1px solid #21262d;
-    }
-
-    td {
-      padding: 9px 12px;
-      border-bottom: 1px solid #21262d;
-      color: #c9d1d9;
-      vertical-align: top;
-    }
-
-    tr:last-child td {
-      border-bottom: none;
-    }
-
-    code {
-      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 4px;
-      padding: 1px 6px;
-      font-size: 12px;
-      color: #f0f6fc;
     }
 
     a {
-      color: #58a6ff;
+      color: var(--accent-light);
       text-decoration: none;
     }
 
@@ -158,12 +139,80 @@
       text-decoration: underline;
     }
 
+    /* Card / surface block */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border-medium);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    thead th {
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-medium);
+      background: var(--surface2);
+    }
+
+    tbody td {
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Highlight note */
+    .note {
+      background: var(--surface2);
+      border: 1px solid var(--border-medium);
+      border-left: 3px solid var(--accent-light);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+    }
+
+    .note.warning {
+      border-left-color: #F59E0B;
+    }
+
+    code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      background: var(--surface2);
+      border: 1px solid var(--border-medium);
+      border-radius: 5px;
+      padding: 1px 6px;
+      font-size: 12px;
+      color: var(--accent-light);
+    }
+
+    /* Footer */
     footer {
       margin-top: 60px;
       padding-top: 24px;
-      border-top: 1px solid #21262d;
+      border-top: 1px solid var(--border-medium);
       font-size: 12px;
-      color: #8b949e;
+      color: var(--text-tertiary);
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -171,365 +220,234 @@
 <div class="container">
 
   <header>
-    <div class="app-name">Met – Networking App</div>
+    <div class="app-label">Met · Networking App</div>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: May 19, 2026</p>
-    <div class="badge">DSGVO / GDPR Compliant · Austria</div>
+    <p class="meta">Last updated: May 20, 2026 &nbsp;·&nbsp; DSGVO / GDPR &nbsp;·&nbsp; Austria</p>
   </header>
 
-  <!-- 1. OVERVIEW -->
-  <div class="highlight-box green">
-    <strong>The short version:</strong> Met stores all data exclusively on your device. No account is required, no data is sent to our servers, and we do not collect analytics, advertising identifiers, or crash reports. Your contacts and notes never leave your phone unless you explicitly choose to export or share them.
+  <div class="summary-box">
+    <strong>The short version:</strong> Met stores everything exclusively on your device. No account, no backend server, no cloud sync. Your contacts and notes never leave your phone unless you explicitly export or share them.
   </div>
 
-  <h2>1. Data Controller</h2>
-  <p>The data controller responsible for the Met app under the General Data Protection Regulation (GDPR / DSGVO, Regulation (EU) 2016/679) is:</p>
-  <p>
-    <strong>Klaus Siebeneicher</strong><br />
-    Vienna, Austria<br />
-    Email: <a href="mailto:ks.siebeneicher@gmail.com">ks.siebeneicher@gmail.com</a>
-  </p>
-  <p>For all privacy-related inquiries, requests to exercise your rights, or questions about this policy, please contact us at the email address above.</p>
+  <hr />
 
-  <!-- 2. SCOPE AND PURPOSE -->
-  <h2>2. Scope and Purpose of Data Processing</h2>
-  <p>Met is a personal relationship management app ("CRM") designed for offline, on-device use. Its purpose is to help you remember people you meet — at events, conferences, or in everyday life — by storing their contact details, voice notes, photos, and interaction history on your device.</p>
+  <!-- 1 -->
+  <h2>1 · Data Controller</h2>
+  <p>The data controller responsible for Met under the General Data Protection Regulation (GDPR / DSGVO, Regulation (EU) 2016/679):</p>
+  <p><strong>Klaus Siebeneicher</strong><br />Vienna, Austria<br /><a href="mailto:ks.siebeneicher@gmail.com">ks.siebeneicher@gmail.com</a></p>
 
-  <h3>Data about third parties (people you add to Met)</h3>
-  <p>When you use Met, you store personal data about other people (contacts). Under GDPR Art. 2(2)(c) and Recital 18, the regulation does not apply to processing of personal data carried out by a natural person in the course of a <strong>purely personal or household activity</strong>. If you use Met solely for personal networking (not in a professional capacity on behalf of an organisation), you act as the data controller for your contacts' data, and the GDPR household exemption applies.</p>
-  <p>If you use Met in a professional context (e.g., as a sole trader, founder, or sales professional), you are the data controller for the contact data and are responsible for ensuring a lawful basis for storing that data. Met's architecture — fully offline, no shared database, no cloud sync — is designed to minimise risk for all users.</p>
+  <!-- 2 -->
+  <h2>2 · Scope and Purpose</h2>
+  <p>Met is a personal relationship management app built for offline, on-device use. It helps you remember people you meet by storing their contact details, voice notes, photos, and interaction history — entirely on your device.</p>
 
-  <!-- 3. DATA CATEGORIES -->
-  <h2>3. Categories of Personal Data Processed</h2>
-  <p>All of the following data is stored <strong>only on your device</strong> and is never transmitted to us.</p>
+  <h3>Data about your contacts</h3>
+  <p>When you use Met you store personal data about other people. Under GDPR Art. 2(2)(c) and Recital 18, the regulation does not apply to processing carried out by a natural person in the course of a <strong>purely personal or household activity</strong>. If you use Met for personal networking only, the household exemption applies.</p>
+  <p>If you use Met professionally (e.g. as a founder or sales professional), you are the data controller for your contacts' data and are responsible for a lawful basis. Met's fully offline architecture minimises risk in all cases.</p>
 
-  <h3>3.1 Contact Data</h3>
-  <table>
-    <tr>
-      <th>Data field</th>
-      <th>Required</th>
-      <th>Purpose</th>
-    </tr>
-    <tr>
-      <td>Name</td>
-      <td>Yes</td>
-      <td>Identify the contact</td>
-    </tr>
-    <tr>
-      <td>Job title</td>
-      <td>No</td>
-      <td>Professional context; used for auto-category detection</td>
-    </tr>
-    <tr>
-      <td>Company</td>
-      <td>No</td>
-      <td>Professional context; used for auto-category detection</td>
-    </tr>
-    <tr>
-      <td>Email address</td>
-      <td>No</td>
-      <td>Contact reference</td>
-    </tr>
-    <tr>
-      <td>Phone number</td>
-      <td>No</td>
-      <td>Contact reference</td>
-    </tr>
-    <tr>
-      <td>LinkedIn URL</td>
-      <td>No</td>
-      <td>Social profile link</td>
-    </tr>
-    <tr>
-      <td>Website</td>
-      <td>No</td>
-      <td>Professional reference</td>
-    </tr>
-    <tr>
-      <td>Address</td>
-      <td>No</td>
-      <td>Location reference</td>
-    </tr>
-    <tr>
-      <td>Date met / Event</td>
-      <td>No</td>
-      <td>Context of the encounter</td>
-    </tr>
-    <tr>
-      <td>Category tag</td>
-      <td>Yes (default: "Other")</td>
-      <td>Organisation and filtering</td>
-    </tr>
-    <tr>
-      <td>Follow-up flag</td>
-      <td>No</td>
-      <td>Personal reminder</td>
-    </tr>
-    <tr>
-      <td>Text note</td>
-      <td>No</td>
-      <td>Free-text personal memory</td>
-    </tr>
-  </table>
+  <!-- 3 -->
+  <h2>3 · Data Collected</h2>
+  <p>All data listed below is stored <strong>only on your device</strong> and is never sent to us.</p>
 
-  <h3>3.2 Media Data</h3>
-  <table>
-    <tr>
-      <th>Data</th>
-      <th>Storage location</th>
-      <th>Purpose</th>
-    </tr>
-    <tr>
-      <td>Face photo</td>
-      <td>App's private storage on your device</td>
-      <td>Visual recognition of the contact</td>
-    </tr>
-    <tr>
-      <td>Business card photo</td>
-      <td>App's private storage on your device</td>
-      <td>Reference scan of physical card</td>
-    </tr>
-    <tr>
-      <td>Voice note (WAV audio)</td>
-      <td>App's private storage on your device (<code>voice-notes/</code>)</td>
-      <td>Audio memory of the person or meeting</td>
-    </tr>
-    <tr>
-      <td>Voice note transcript (text)</td>
-      <td>App database on your device</td>
-      <td>Searchable text version of voice note</td>
-    </tr>
-  </table>
-
-  <div class="highlight-box yellow">
-    <strong>Note on biometric-adjacent data:</strong> Face photos and voice recordings may qualify as special category data under GDPR Art. 9 if used for identification purposes. In Met, photos and recordings are used solely as personal memory aids — they are not used for biometric identification or authentication. All processing occurs exclusively on your device.
+  <h3>Contact fields</h3>
+  <div class="card">
+    <table>
+      <thead><tr><th>Field</th><th>Required</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Name</td><td>Yes</td><td>Identify the contact</td></tr>
+        <tr><td>Job title</td><td>No</td><td>Professional context; used for auto-category detection</td></tr>
+        <tr><td>Company</td><td>No</td><td>Professional context; used for auto-category detection</td></tr>
+        <tr><td>Email address</td><td>No</td><td>Contact reference</td></tr>
+        <tr><td>Phone number</td><td>No</td><td>Contact reference</td></tr>
+        <tr><td>LinkedIn URL</td><td>No</td><td>Social profile link</td></tr>
+        <tr><td>Website</td><td>No</td><td>Professional reference</td></tr>
+        <tr><td>Address</td><td>No</td><td>Location reference</td></tr>
+        <tr><td>Date met / Event</td><td>No</td><td>Context of the encounter</td></tr>
+        <tr><td>Category tag</td><td>Yes (default: Other)</td><td>Organisation and filtering</td></tr>
+        <tr><td>Follow-up flag</td><td>No</td><td>Personal reminder</td></tr>
+        <tr><td>Text note</td><td>No</td><td>Free-text personal memory</td></tr>
+      </tbody>
+    </table>
   </div>
 
-  <h3>3.3 Interaction Logs</h3>
-  <p>For each contact, you may optionally log interactions (follow-up calls, meetings, notes). Each interaction record contains: a title, a date, an optional text note, and an optional voice note (with optional transcript). All interaction data is stored locally on your device.</p>
-
-  <h3>3.4 Event Data</h3>
-  <p>You may create events (conferences, meetups) and tag contacts to them. Event data (name, date, optional location) is stored locally and never transmitted.</p>
-
-  <h3>3.5 App Settings</h3>
-  <p>Your preferences (transcription on/off, quality setting, category mode, hidden fields, default event, webhook configuration) are stored locally in the app's private data storage. No settings data is transmitted to us.</p>
-
-  <!-- 4. HOW DATA IS COLLECTED -->
-  <h2>4. How Data Is Collected</h2>
-
-  <h3>4.1 Manual Entry</h3>
-  <p>You type contact information directly into the app. No data is sent anywhere during this process.</p>
-
-  <h3>4.2 Business Card Scan</h3>
-  <p>Met can photograph a physical business card and extract text from it. This uses <strong>Google ML Kit Text Recognition</strong>, which runs entirely on your device — the image is never uploaded to any server. After extraction, the text is parsed locally to populate contact fields. The card photo is stored on your device if you choose to keep it.</p>
-
-  <h3>4.3 LinkedIn QR Code Scan</h3>
-  <p>Met can scan a LinkedIn QR code to extract a LinkedIn profile URL. The camera captures the QR code locally; the URL is decoded on-device. No data is sent to LinkedIn or any other service as part of this scan.</p>
-
-  <h3>4.4 Phone Contacts Import</h3>
-  <p>With your explicit permission, Met can read contacts from your device's address book (name, phone numbers, email addresses, company, job title). Imported contacts are stored in Met's local database on your device. No contacts data is uploaded to our servers. You can undo an import from Settings → Remove last import.</p>
-
-  <h3>4.5 Voice Recording</h3>
-  <p>Met can record a voice note about a person or an interaction. The audio is saved locally in WAV format inside the app's private storage directory. The microphone is only active while you are actively recording; Met does not record in the background.</p>
-
-  <h3>4.6 On-Device Transcription (Whisper AI)</h3>
-  <p>If you enable voice note transcription in Settings, Met downloads an open-source speech recognition model (OpenAI Whisper, via the <a href="https://huggingface.co/ggerganov/whisper.cpp" target="_blank" rel="noopener">ggerganov/whisper.cpp repository on Hugging Face</a>) onto your device. Once downloaded, transcription is performed entirely on-device — your voice recordings are never sent to any server. Three quality tiers are available (Tiny ~75 MB, Base ~150 MB, Small ~490 MB), stored in the app's private file storage. During the model download, only the model file itself is transferred; no identifying information is sent to Hugging Face.</p>
-
-  <h3>4.7 Face Photo / Photo Library</h3>
-  <p>You may attach a face photo to a contact by taking a new photo with the camera or selecting one from your photo library. This requires camera or photo library permission. Photos are stored in the app's private storage on your device and are not uploaded anywhere.</p>
-
-  <!-- 5. PERMISSIONS -->
-  <h2>5. Device Permissions</h2>
-  <table>
-    <tr>
-      <th>Permission</th>
-      <th>When requested</th>
-      <th>Used for</th>
-    </tr>
-    <tr>
-      <td>Camera</td>
-      <td>First use of card scan, QR scan, or face photo camera</td>
-      <td>Capturing business card images, QR codes, and face photos</td>
-    </tr>
-    <tr>
-      <td>Microphone</td>
-      <td>First use of voice recorder</td>
-      <td>Recording voice notes about contacts or interactions</td>
-    </tr>
-    <tr>
-      <td>Contacts (Address Book)</td>
-      <td>When you use "Import from Contacts" in Settings</td>
-      <td>Reading your device contacts to import into Met</td>
-    </tr>
-    <tr>
-      <td>Photo Library</td>
-      <td>When you choose "Library" to pick a face photo</td>
-      <td>Selecting an existing photo as a contact's face photo</td>
-    </tr>
-  </table>
-  <p>All permissions are granted by you through the standard iOS or Android permission dialog. You can revoke any permission at any time in your device's Settings app. Revoking a permission does not delete existing data already stored in Met.</p>
-
-  <!-- 6. OPTIONAL WEBHOOK -->
-  <h2>6. Optional Webhook Integration</h2>
-  <div class="highlight-box yellow">
-    <strong>Webhook is disabled by default.</strong> It must be explicitly enabled and configured by you in Settings → Webhook.
+  <h3>Media</h3>
+  <div class="card">
+    <table>
+      <thead><tr><th>Data</th><th>Storage</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Face photo</td><td>App private storage</td><td>Visual recognition of the contact</td></tr>
+        <tr><td>Business card photo</td><td>App private storage</td><td>Reference scan of physical card</td></tr>
+        <tr><td>Voice note (WAV audio)</td><td><code>voice-notes/</code> in app storage</td><td>Audio memory of the person or meeting</td></tr>
+        <tr><td>Voice note transcript</td><td>App database on device</td><td>Searchable text version of voice note</td></tr>
+      </tbody>
+    </table>
   </div>
-  <p>Met offers an optional webhook feature that sends contact data to an HTTPS URL of your choice (e.g., a Zapier zap, Make scenario, or your own server) when you add or edit a contact.</p>
-  <p>When enabled, the following data may be transmitted to the URL you configure:</p>
+
+  <div class="note">
+    <strong>Note on biometric-adjacent data:</strong> Face photos and voice recordings may qualify as special category data under GDPR Art. 9 if used for identification. In Met they are used solely as personal memory aids — not for biometric identification. All processing is on-device only.
+  </div>
+
+  <h3>Interaction logs</h3>
+  <p>You may log interactions (calls, meetings, follow-ups) per contact. Each log contains a title, date, optional text note, and optional voice note with transcript. All stored locally.</p>
+
+  <h3>Events</h3>
+  <p>You may create events (conferences, meetups) and tag contacts to them. Event data — name, date, optional location — is stored locally and never transmitted.</p>
+
+  <h3>Settings</h3>
+  <p>Your preferences (transcription on/off, quality, category mode, webhook configuration, etc.) are stored locally in the app's private data storage. None of this is sent to us.</p>
+
+  <!-- 4 -->
+  <h2>4 · How Data Is Collected</h2>
+
+  <h3>Manual entry</h3>
+  <p>You type contact information directly into the app. Nothing is sent anywhere during this process.</p>
+
+  <h3>Business card scan</h3>
+  <p>Met can photograph a physical business card and extract text from it using <strong>Google ML Kit Text Recognition</strong>, which runs entirely on-device. The image is never uploaded. After extraction the text is parsed locally to populate contact fields. The card photo is stored on your device if you keep it.</p>
+
+  <h3>LinkedIn QR scan</h3>
+  <p>Met can scan a LinkedIn QR code to extract a profile URL. The QR code is decoded on-device; nothing is sent to LinkedIn or any other service during the scan.</p>
+
+  <h3>Phone contacts import</h3>
+  <p>With your explicit permission, Met reads contacts from your device address book (name, phone, email, company, job title). Imported contacts are stored in Met's local database. No contacts data is uploaded. You can undo an import via Settings → Remove last import.</p>
+
+  <h3>Voice recording</h3>
+  <p>Met records voice notes in WAV format, saved in the app's private storage. The microphone is only active while you are actively recording — Met never records in the background.</p>
+
+  <h3>On-device transcription (Whisper AI)</h3>
+  <p>If you enable transcription in Settings, Met downloads an open-source speech recognition model (<a href="https://huggingface.co/ggerganov/whisper.cpp" target="_blank" rel="noopener">OpenAI Whisper via Hugging Face</a>) onto your device. Three quality tiers: Tiny (~75 MB), Base (~150 MB), Small (~490 MB). Transcription runs entirely on-device — your audio is never sent anywhere. During the model download, only standard HTTP metadata (IP, user-agent) is exchanged with Hugging Face to fetch a static file.</p>
+
+  <h3>Face photo / photo library</h3>
+  <p>You may attach a face photo by taking a new photo or selecting one from your library. Photos are stored in the app's private storage on your device and are not uploaded anywhere.</p>
+
+  <!-- 5 -->
+  <h2>5 · Device Permissions</h2>
+  <div class="card">
+    <table>
+      <thead><tr><th>Permission</th><th>When requested</th><th>Used for</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Camera</strong></td><td>First use of card scan, QR scan, or face photo</td><td>Capturing business cards, QR codes, and face photos</td></tr>
+        <tr><td><strong>Microphone</strong></td><td>First use of voice recorder</td><td>Recording voice notes</td></tr>
+        <tr><td><strong>Contacts</strong></td><td>When you tap "Import from Contacts" in Settings</td><td>Reading device contacts to import into Met</td></tr>
+        <tr><td><strong>Photo library</strong></td><td>When you choose "Library" to pick a face photo</td><td>Selecting an existing photo</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>All permissions are granted through the standard iOS / Android dialog. You can revoke any permission at any time in your device's Settings. Revoking does not delete data already stored in Met.</p>
+
+  <!-- 6 -->
+  <h2>6 · Optional Webhook Integration</h2>
+  <div class="note warning">
+    <strong>Disabled by default.</strong> The webhook must be explicitly enabled and configured by you in Settings → Webhook.
+  </div>
+  <p>Met offers an optional webhook that sends contact data to an HTTPS URL of your choice (e.g. Zapier, Make, n8n, or your own server) when you add or edit a contact.</p>
+  <p>When enabled, the following data may be sent to the URL you configure:</p>
   <ul>
     <li>Name, job title, company</li>
-    <li>Email address, phone number, LinkedIn URL, website, address</li>
-    <li>Category tags</li>
-    <li>Associated event name</li>
-    <li>Text notes and voice note transcript</li>
-    <li>Follow-up flag and date met</li>
-    <li>An internal contact ID and timestamp</li>
+    <li>Email, phone, LinkedIn URL, website, address</li>
+    <li>Category tags and associated event name</li>
+    <li>Text notes and voice note transcript (never the audio file itself)</li>
+    <li>Follow-up flag, date met, an internal contact ID, and timestamp</li>
   </ul>
-  <p><strong>You are solely responsible for the security and privacy compliance of the endpoint URL you configure.</strong> Voice audio files are never transmitted by the webhook — only the text transcript (if transcription is enabled) is included. You can disable or remove the webhook at any time in Settings.</p>
-  <p>If you send contact data to a third-party service (e.g., Zapier, Make, Notion), that service's own privacy policy applies to data once received.</p>
+  <p><strong>You are solely responsible for the security and privacy compliance of the endpoint URL you configure.</strong> You can disable or remove the webhook at any time in Settings. If you send data to a third-party service, that service's own privacy policy governs data once received.</p>
 
-  <!-- 7. LEGAL BASIS -->
-  <h2>7. Legal Basis for Processing (DSGVO Art. 6)</h2>
-  <table>
-    <tr>
-      <th>Processing activity</th>
-      <th>Legal basis</th>
-    </tr>
-    <tr>
-      <td>Storing contact data entered manually</td>
-      <td>Art. 6(1)(a) DSGVO – your consent (you actively enter the data); Art. 6(1)(f) DSGVO – legitimate interest in personal relationship management</td>
-    </tr>
-    <tr>
-      <td>Camera, microphone, contacts access</td>
-      <td>Art. 6(1)(a) DSGVO – consent (you grant the OS permission dialog)</td>
-    </tr>
-    <tr>
-      <td>Importing device contacts</td>
-      <td>Art. 6(1)(a) DSGVO – your explicit consent via the import confirmation dialog</td>
-    </tr>
-    <tr>
-      <td>Voice recording and on-device transcription</td>
-      <td>Art. 6(1)(a) DSGVO – consent; processing occurs solely on your device</td>
-    </tr>
-    <tr>
-      <td>Whisper model download from Hugging Face</td>
-      <td>Art. 6(1)(a) DSGVO – consent (you enable transcription in Settings); no personal data is transferred</td>
-    </tr>
-    <tr>
-      <td>Webhook transmission of contact data</td>
-      <td>Art. 6(1)(a) DSGVO – your explicit consent (you configure and enable the webhook)</td>
-    </tr>
-  </table>
-  <p>For data about third parties (your contacts): if the household exemption (DSGVO Art. 2(2)(c)) does not apply to your use case, the relevant legal basis is Art. 6(1)(f) – legitimate interest in maintaining professional or personal relationships, balanced against the minimal privacy risk given that data is stored solely on your personal device.</p>
+  <!-- 7 -->
+  <h2>7 · Legal Basis (DSGVO Art. 6)</h2>
+  <div class="card">
+    <table>
+      <thead><tr><th>Processing activity</th><th>Legal basis</th></tr></thead>
+      <tbody>
+        <tr><td>Storing manually entered contact data</td><td>Art. 6(1)(a) – consent; Art. 6(1)(f) – legitimate interest in personal relationship management</td></tr>
+        <tr><td>Camera, microphone, contacts access</td><td>Art. 6(1)(a) – consent via OS permission dialog</td></tr>
+        <tr><td>Phone contacts import</td><td>Art. 6(1)(a) – explicit consent via import confirmation</td></tr>
+        <tr><td>Voice recording and on-device transcription</td><td>Art. 6(1)(a) – consent; processing is solely on-device</td></tr>
+        <tr><td>Whisper model download from Hugging Face</td><td>Art. 6(1)(a) – consent (you enable transcription in Settings); no personal data is transferred</td></tr>
+        <tr><td>Webhook transmission of contact data</td><td>Art. 6(1)(a) – explicit consent (you configure and enable the webhook)</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-  <!-- 8. DATA STORAGE -->
-  <h2>8. Data Storage and Security</h2>
-  <p>All data is stored on your device using the following mechanisms:</p>
+  <!-- 8 -->
+  <h2>8 · Storage and Security</h2>
   <ul>
-    <li><strong>App database:</strong> Contact records, events, interactions, and settings are stored using AsyncStorage, serialised as JSON in the app's sandboxed private directory.</li>
-    <li><strong>Audio files:</strong> Voice note WAV files are stored in <code>&lt;documentDirectory&gt;/voice-notes/</code> inside the app sandbox.</li>
-    <li><strong>Whisper model files:</strong> AI model binary files are stored in <code>&lt;documentDirectory&gt;/whisper/</code>.</li>
-    <li><strong>Photos:</strong> Face and business card photos are stored in the app's private storage directory.</li>
+    <li><strong>App database:</strong> Contact records, events, interactions, and settings are stored via AsyncStorage as JSON in the app's sandboxed private directory.</li>
+    <li><strong>Audio files:</strong> Voice note WAV files are in <code>documentDirectory/voice-notes/</code> inside the app sandbox.</li>
+    <li><strong>Whisper model files:</strong> AI model binaries are in <code>documentDirectory/whisper/</code>.</li>
+    <li><strong>Photos:</strong> Face and business card photos are in the app's private storage.</li>
   </ul>
-  <p>The app sandbox on iOS and Android provides hardware-level encryption (iOS uses the Secure Enclave; Android uses file-based encryption on supported devices). Met does not implement additional application-level encryption on top of OS-level protections, which are enabled by default on all modern iOS and Android devices.</p>
-  <p>Met does not use iCloud backup, Google Drive backup, or any other cloud sync. If you back up your device to iCloud or Google, the app data may be included in that backup — this is governed by Apple's or Google's privacy policy, not ours.</p>
+  <p>The iOS and Android app sandboxes provide hardware-level encryption by default (iOS Secure Enclave; Android file-based encryption). Met does not add a separate application-level encryption layer on top of these OS protections.</p>
+  <p>Met does not use iCloud, Google Drive, or any cloud sync. If you back up your device to iCloud or Google, app data may be included in that backup — governed by Apple's or Google's own privacy policy.</p>
 
-  <!-- 9. DATA RETENTION -->
-  <h2>9. Data Retention</h2>
-  <p>Data is retained indefinitely until you delete it. You are in full control:</p>
+  <!-- 9 -->
+  <h2>9 · Data Retention</h2>
+  <p>Data is kept until you delete it. You are in full control:</p>
   <ul>
-    <li><strong>Delete a contact:</strong> Swipe to delete or use the delete button on the contact profile. This removes the contact record and its associated voice note audio file.</li>
+    <li><strong>Delete a contact:</strong> Swipe to delete or use the delete button on the profile. Removes the record and its associated voice note file.</li>
     <li><strong>Delete an interaction:</strong> Remove individual interaction logs from a contact's profile.</li>
-    <li><strong>Remove a voice note:</strong> Tap the trash icon in the voice recorder to delete the audio file.</li>
-    <li><strong>Undo contact import:</strong> Settings → Remove last import deletes all contacts imported in your most recent import.</li>
-    <li><strong>Delete all data:</strong> Uninstalling the app removes all stored data from your device (including voice note files and model files), subject to your OS backup settings.</li>
+    <li><strong>Delete a voice note:</strong> Tap the trash icon in the recorder.</li>
+    <li><strong>Undo an import:</strong> Settings → Remove last import deletes all contacts from the most recent import.</li>
+    <li><strong>Delete all data:</strong> Uninstalling the app removes all stored data, subject to your OS backup settings.</li>
   </ul>
 
-  <!-- 10. DATA EXPORT / PORTABILITY -->
-  <h2>10. Data Export and Portability</h2>
-  <p>You can export all your contacts as a CSV file via Settings → Export all data (DSGVO Art. 20 – Right to data portability). The export includes all structured contact fields and is generated entirely on your device. You choose where to save or send the file using your device's share sheet. We do not receive a copy of the export.</p>
+  <!-- 10 -->
+  <h2>10 · Data Portability</h2>
+  <p>You can export all contacts as a CSV file via Settings → Export all data (DSGVO Art. 20). The file is generated entirely on your device and shared via your OS share sheet. We do not receive a copy.</p>
 
-  <!-- 11. THIRD-PARTY SERVICES -->
-  <h2>11. Third-Party Services and SDKs</h2>
-  <table>
-    <tr>
-      <th>Service / Library</th>
-      <th>What it does</th>
-      <th>Data sent externally</th>
-    </tr>
-    <tr>
-      <td>Google ML Kit Text Recognition</td>
-      <td>Recognises text on business card photos</td>
-      <td>None — runs entirely on-device</td>
-    </tr>
-    <tr>
-      <td>whisper.rn (OpenAI Whisper)</td>
-      <td>Speech-to-text transcription of voice notes</td>
-      <td>None — runs entirely on-device</td>
-    </tr>
-    <tr>
-      <td>Hugging Face (model download only)</td>
-      <td>Source for downloading the Whisper model file</td>
-      <td>Standard HTTP request metadata (IP address, user-agent) to download a static file. No audio or personal data is sent.</td>
-    </tr>
-    <tr>
-      <td>expo-contacts (Apple Contacts / Android Contacts)</td>
-      <td>Reads contacts from your address book on import</td>
-      <td>None — data is read locally and stored in the app</td>
-    </tr>
-    <tr>
-      <td>Apple App Store / Google Play</td>
-      <td>App distribution</td>
-      <td>Apple and Google collect their own data as part of app store operations (e.g., crash reports, download statistics). This is governed by their respective privacy policies.</td>
-    </tr>
-  </table>
-  <p>Met contains no advertising SDKs, no analytics SDKs, no crash reporting services, and no social login or tracking pixels.</p>
+  <!-- 11 -->
+  <h2>11 · Third-Party Services</h2>
+  <div class="card">
+    <table>
+      <thead><tr><th>Service</th><th>What it does</th><th>Data sent externally</th></tr></thead>
+      <tbody>
+        <tr><td>Google ML Kit Text Recognition</td><td>Recognises text on business card photos</td><td>None — fully on-device</td></tr>
+        <tr><td>whisper.rn (OpenAI Whisper)</td><td>Speech-to-text transcription</td><td>None — fully on-device</td></tr>
+        <tr><td>Hugging Face (model download)</td><td>Source for the Whisper model file</td><td>Standard HTTP metadata to download a static file. No audio or personal data.</td></tr>
+        <tr><td>expo-contacts (OS address book)</td><td>Reads contacts on import</td><td>None — data stays on device</td></tr>
+        <tr><td>Apple App Store / Google Play</td><td>App distribution</td><td>Apple and Google collect their own data (crash reports, download stats) under their respective privacy policies.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Met contains no advertising SDKs, no analytics SDKs, no crash reporting services, and no tracking pixels.</p>
 
-  <!-- 12. YOUR RIGHTS -->
-  <h2>12. Your Rights Under DSGVO</h2>
-  <p>Under the DSGVO / GDPR you have the following rights regarding any personal data about you that we process as data controller:</p>
+  <!-- 12 -->
+  <h2>12 · Your Rights under DSGVO</h2>
   <ul>
-    <li><strong>Art. 15 – Right of access:</strong> You may request confirmation of whether we process personal data about you and, if so, a copy of that data.</li>
-    <li><strong>Art. 16 – Right to rectification:</strong> You may request correction of inaccurate personal data we hold about you.</li>
-    <li><strong>Art. 17 – Right to erasure ("Right to be forgotten"):</strong> You may request deletion of personal data we hold about you where there is no legitimate ground for continued processing.</li>
-    <li><strong>Art. 18 – Right to restriction of processing:</strong> You may request that we restrict processing of your personal data in certain circumstances.</li>
-    <li><strong>Art. 20 – Right to data portability:</strong> You may request your personal data in a structured, commonly used, machine-readable format.</li>
-    <li><strong>Art. 21 – Right to object:</strong> You may object to processing based on legitimate interests (Art. 6(1)(f)).</li>
-    <li><strong>Art. 7(3) – Right to withdraw consent:</strong> Where processing is based on consent, you may withdraw it at any time without affecting prior processing.</li>
+    <li><strong>Art. 15 – Access:</strong> Request confirmation of whether we process personal data about you and a copy of that data.</li>
+    <li><strong>Art. 16 – Rectification:</strong> Request correction of inaccurate personal data.</li>
+    <li><strong>Art. 17 – Erasure:</strong> Request deletion where there is no legitimate ground for continued processing.</li>
+    <li><strong>Art. 18 – Restriction:</strong> Request restriction of processing in certain circumstances.</li>
+    <li><strong>Art. 20 – Portability:</strong> Receive your data in a structured, machine-readable format (CSV export available directly in the app).</li>
+    <li><strong>Art. 21 – Object:</strong> Object to processing based on legitimate interests.</li>
+    <li><strong>Art. 7(3) – Withdraw consent:</strong> Withdraw consent at any time without affecting prior processing.</li>
   </ul>
-  <p>Because Met stores all data locally on your device and we have no access to it, the most effective way to exercise rights over contact data is directly within the app (editing, deleting). For any data that we might hold about you as the app user (for example, if you contact us by email), please reach out to <a href="mailto:ks.siebeneicher@gmail.com">ks.siebeneicher@gmail.com</a>.</p>
+  <p>Because all contact data lives on your device and we have no access to it, the most effective way to exercise rights over contact data is directly within the app. For any data we might hold about you as an app user (e.g. if you contact us by email), reach out to <a href="mailto:ks.siebeneicher@gmail.com">ks.siebeneicher@gmail.com</a>.</p>
 
-  <!-- 13. SUPERVISORY AUTHORITY -->
-  <h2>13. Right to Lodge a Complaint</h2>
-  <p>If you believe that our processing of your personal data infringes DSGVO, you have the right to lodge a complaint with the competent supervisory authority (DSGVO Art. 77). In Austria, the supervisory authority is:</p>
+  <!-- 13 -->
+  <h2>13 · Supervisory Authority</h2>
+  <p>If you believe our processing infringes DSGVO you have the right to lodge a complaint with the competent supervisory authority (DSGVO Art. 77). In Austria:</p>
   <p>
     <strong>Österreichische Datenschutzbehörde (DSB)</strong><br />
-    Barichgasse 40–42<br />
-    1030 Wien, Austria<br />
-    Phone: +43 1 52 152-0<br />
-    Website: <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">www.dsb.gv.at</a><br />
-    Email: <a href="mailto:dsb@dsb.gv.at">dsb@dsb.gv.at</a>
+    Barichgasse 40–42, 1030 Wien<br />
+    <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">www.dsb.gv.at</a> &nbsp;·&nbsp; <a href="mailto:dsb@dsb.gv.at">dsb@dsb.gv.at</a>
   </p>
-  <p>You may also contact the supervisory authority in your country of residence or the country where an alleged infringement occurred.</p>
+  <p>You may also contact the supervisory authority in your country of residence.</p>
 
-  <!-- 14. CHILDREN -->
-  <h2>14. Children's Privacy</h2>
-  <p>Met is not directed at children under the age of 16. We do not knowingly collect personal data from children. If you believe a child has provided personal data through Met, please contact us and we will take appropriate steps.</p>
+  <!-- 14 -->
+  <h2>14 · Children's Privacy</h2>
+  <p>Met is not directed at children under 16. We do not knowingly collect data from children. Contact us if you believe a child has provided data through the app.</p>
 
-  <!-- 15. CHANGES -->
-  <h2>15. Changes to This Policy</h2>
-  <p>We may update this privacy policy as Met's features evolve. Material changes will be communicated through the App Store / Google Play release notes or within the app. The "last updated" date at the top of this document will always reflect the most recent revision. Continued use of the app after a change constitutes acceptance of the updated policy.</p>
+  <!-- 15 -->
+  <h2>15 · Changes to This Policy</h2>
+  <p>Material changes will be communicated through App Store / Google Play release notes or within the app. The date at the top of this document always reflects the latest revision. Continued use after a change constitutes acceptance.</p>
 
-  <!-- 16. CONTACT -->
-  <h2>16. Contact</h2>
-  <p>For any questions, data subject requests, or concerns about this privacy policy, please contact:</p>
+  <!-- 16 -->
+  <h2>16 · Contact</h2>
   <p>
     Klaus Siebeneicher<br />
     <a href="mailto:ks.siebeneicher@gmail.com">ks.siebeneicher@gmail.com</a>
   </p>
 
   <footer>
-    <p>Met – Privacy Policy · Last updated May 19, 2026 · Governed by DSGVO (Regulation (EU) 2016/679) · Supervisory authority: Datenschutzbehörde, Wien, Austria</p>
+    Met · Privacy Policy · Last updated May 20, 2026 · DSGVO (Regulation (EU) 2016/679) · Supervisory authority: Datenschutzbehörde, Wien, Austria
   </footer>
 
 </div>
